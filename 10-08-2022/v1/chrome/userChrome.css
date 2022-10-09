@@ -1,0 +1,75 @@
+menupopup {
+	-moz-appearance: none !important;
+	border-radius: 6px !important;
+	overflow: hidden !important;
+}
+
+menupopup, menupopup#contentAreaContextMenu {
+	background-color: transparent !important;
+}
+
+#context-take-screenshot, #context-sendpagetodevice,
+#context-sendlinktodevice, #context-inspect-a11y,
+#context-bookmarklink, #context-bookmarkpage {
+	display: none !important;
+}
+
+.menupopup-arrowscrollbox {
+	background: transparent !important;
+	position: relative;
+	overflow: hidden;
+}
+
+.menupopup-arrowscrollbox::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	background: #f9a no-repeat url(menupopup.jpg) bottom !important;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
+
+menuitem, menu {
+	color: #fff !important;
+}
+
+menupopup > menuitem, menupopup > menu,
+#context-back, #context-forward, #context-reload,
+#context-stop, #context-savelink {
+	-moz-appearance: none !important;
+	padding: 8px !important;
+	background: linear-gradient(45deg, #055c, #55fc, #f5ac, #0000, #0000, #0000) !important;
+	background-size: 500% !important;
+	background-position: 100% !important;
+	transition: 0.5s ease-in !important;
+}
+
+menupopup > menuitem:hover, menupopup > menu:hover,
+#context-back:hover, #context-forward:hover,
+#context-reload:hover, #context-stop:hover,
+#context-savelink:hover {
+	transition: none !important;
+	background-position: 0 !important;
+}
+
+menupopup>menuitem:disabled, menupopup>menuitem[disabled],
+menupopup>menuitem:disabled:hover, menupopup>menuitem[disabled]:hover {
+	opacity: 0.75 !important;
+	background: transparent !important;
+	background-color: transparent !important;
+}
+
+toolbarbutton *:first-child, .tab-stack *:first-child {
+	transition: 0.5s;
+}
+
+toolbarbutton:hover *:first-child, .tab-stack:hover *:first-child {
+	transition: 0.075s;
+}
+
+#appmenu-button menupopup {
+	background: #000 !important;
+}

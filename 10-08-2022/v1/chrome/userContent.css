@@ -1,0 +1,82 @@
+:root {
+	--transition-time: 0.5s;
+	--transition-time-2: 0.25s;
+}
+
+.search-wrapper .search-inner-wrapper {
+	display: none !important;
+}
+
+.search-wrapper .logo-and-wordmark {
+	margin: 0 !important;
+}
+
+.search-wrapper .logo-and-wordmark .wordmark {
+	background: none !important;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.search-wrapper .logo-and-wordmark .wordmark::before {
+	content: 'Firefox';
+	font-size: 39px !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	filter: drop-shadow(3px 3px 1px #0006);
+	z-index: 100 !important;
+}
+
+span.context-menu {
+	background: transparent !important;
+	backdrop-filter: blur(8px);
+}
+
+.top-site-inner .top-site-button .tile {
+	background-color: #0000 !important;
+	box-shadow: 1px 2px 6px #0009 !important;
+	transition: var(--transition-time-2) ease;
+}
+
+.top-site-outer:hover .top-site-inner .top-site-button .tile {
+	transform: translateY(-10%) scale(1.5);
+	box-shadow: none !important;
+}
+
+.top-site-outer {
+	transition: var(--transition-time) ease;
+}
+
+.top-site-outer:hover {
+	box-shadow: 1px 1px 6px #0009 !important;
+	background-color: #0002 !important;
+	transition: none;
+}
+
+.top-site-inner .top-site-button .tile {
+	height: 90px !important;
+	width: 90px !important;
+	backdrop-filter: blur(6px);
+}
+
+.top-site-outer:hover .top-site-inner .top-site-button .tile {
+	backdrop-filter: none;
+}
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+	.click-target-container *, .top-sites-list * {
+		color: #fff !important;
+		text-shadow: 2px 2px 2px #222 !important;
+	}
+
+	body::before {
+		content: "";
+		z-index: -1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: #f9a no-repeat url(bg-img.jpg) center;
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+	}
+}
